@@ -14,17 +14,17 @@ filterOption.addEventListener("click", filterTodo);
 // //Create list
 function createList(todoDiv, todo) {
 
-  const newTodo = document.createElement("li");
+  const newTodo     = document.createElement("li");
   newTodo.innerText = todo;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
-  todoInput.value = "";
+  todoInput.value   = "";
 }
 
 // //Append Complete Button
 function completeButton(todoDiv) {
 
-  const completedButton = document.createElement("button");
+  const completedButton     = document.createElement("button");
   completedButton.innerHTML = `<i class="fas fa-check"></i>`;
   completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
@@ -33,7 +33,7 @@ function completeButton(todoDiv) {
 // //Append Trash Button
 function trashButton(todoDiv) {
 
-  const trashButton = document.createElement('button');
+  const trashButton     = document.createElement('button');
   trashButton.innerHTML = `<i class="fas fa-trash"></i>`;
   trashButton.classList.add('trash-btn');
   todoDiv.appendChild(trashButton);
@@ -152,7 +152,7 @@ function filterTodo(e) {
 
   const todos = todoList.childNodes;
 
-  todos.forEach((todo, index) => {
+  todos.forEach(todo => {
 
     switch (e.target.value) {
 
